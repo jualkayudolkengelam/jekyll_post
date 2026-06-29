@@ -62,7 +62,7 @@ for i in range(start, min(start+80, len(lines))):
     marker = ''
     if 'Instruksi' in l:
         marker = ' <-- INSTRUKSI'
-    elif '"' in l and any(kw in l[:60].lower() for kw in ['tulis ', 'isi ', 'berikan ']):
+    elif '"' in l and any(kw in l[:60].lower() for kw in ['tulis ', 'isi ', 'berikan ', 'jelaskan ']):
         marker = ' <-- INSTRUKSI'
     print(f"{i+1}|{l}{marker}")
     if l.startswith('# SECTION ') and i > start and 'NAMA' not in l:
@@ -96,12 +96,21 @@ Each section has a specific structure. See `references/section-content-patterns.
 11. CTA / RELEVANSI / PENUTUP
 
 ## Reference Files
+- `references/known-issues.md` — Bug struktural pada entrypoint.py + scripts (CRITICAL — baca SEBELUM jalankan autopilot; Reviewer false-APPROVE, Writer placeholder gap, execute_code misused, --skip-research no-op)
 - `references/post-nasional-flow.md` — Overall sequential flow
 - `references/jekyll-post-fields.md` — Complete field list per section
 - `references/template-structure.md` — Template layout / block diagram
 - `references/pitfalls-and-user-preferences.md` — All pitfalls + user preferences (crucial — READ FIRST)
 - `references/section-content-patterns.md` — Exact YAML format per section type (NEW)
 - `references/multi-agent-pipeline.md` — Multi-agent pipeline definition + entrypoint script (NEW)
+
+## WARNING: Autopilot entrypoint.py TIDAK aman (2026-06-29)
+
+`entrypoint.py` pipeline Research→Writer→Editor→Reviewer mempunyai bug struktural — Reviewer akan APPROVED padahal output masih 160+ placeholder instruksi. JANGAN percaya "APPROVED" dari autopilot. Selalu verifikasi manual:
+```bash
+grep -c '"\(tulis\|isi\|berikan\|jelaskan\|contoh\|misal\)' _post_with_city/{post}.md
+```
+Bila >0 → post belum siap. Lihat `references/known-issues.md` untuk detail bug + verifikasi cepat. Workflow manual REPORT→WAIT→FIX (section-by-section) tetap dapat dipercaya dan adalah jalan utama.
 
 ## Common Pitfalls
 - **Tool output truncation** — `read_file`, `terminal`, `execute_code` all suffer CCR encoding. Use `execute_code` with targeted line ranges, not whole-file reads.

@@ -1,74 +1,72 @@
 #!/usr/bin/env python3
 """
 Research Agent — kumpulkan data akurat tentang kota target.
-Output: JSON dengan field-field yang dibutuhkan template.
 
-Cross-AI compatible: bisa dipanggil dari Hermes, Claude Code, atau CLI biasa.
+Versi 2 (fail-loud): Tidak lagi menyalahgunakan hermes_tools.execute_code sebagai
+antarmuka LLM (execute_code menjalankan kode PYTHON, bukan prompt natural-language,
+sehingga Option A versi lama crash dengan SyntaxError ketika tidak ada cache).
+
+Sumber yang didukung sekarang:
+  1. Cache JSON di /tmp/research-output/{city}.json — disiapkan oleh Hermes
+     agent via delegate_task sebelum entrypoint.py dipanggil, atau ditarik dari
+     data riset manual.
+  2. skip_agent=True: pakai cache saja, fail-loud bila tidak ada.
+
+Untuk spawn research sub-agent, panggil pipeline dari Hermes via delegate_task
+(food jadi data.json) — entrypoint tidak lagi mencoba-melakukan sendiri.
 """
 
+from __future__ import annotations
+
 import json
+import re
 import sys
 from pathlib import Path
 
 
-def research(city: str) -> dict:
-    """
-    Kumpulkan data tentang kota.
-    Jika hermes_tools.execute_code tersedia, spawn Research sub-agent.
-    Jika tidak, coba load dari cache /tmp/research-output/{city}.json.
+_CACHE_DIR = Path("/tmp/research-output")
 
-    Returns dict with all template-required fields.
-    """
-    try:
-        from hermes_tools import execute_code
 
-        prompt = _build_research_prompt(city)
-        result = execute_code(code=prompt)
-        data = json.loads(result)
-        # Save cache
-        cache_dir = Path("/tmp/research-output")
-        cache_dir.mkdir(parents=True, exist_ok=True)
-        (cache_dir / f"{city}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2))
+def _city_key(city: str) -> str:
+    """Normalisasi nama kota untuk cache key (lowercase + strip)."""
+    return re.sub(r"\s+", "", city.strip().lower())
+
+
+def research(city: str, skip_agent: bool = False) -> dict:
+    """Kumpulkan data kota dari cache.
+
+    Args:
+        city: Nama kota/kabupaten target.
+        skip_agent: Bila True, langsung pakai cache. False pun sekarang
+            menggunakan cache (spawn agent dihapus); flag dipertahankan
+            untuk kompatibilitas CLI existing.
+
+    Returns:
+        dict data kota.
+
+    Raises:
+        FileNotFoundError: bila cache belum tersedia. Penanganan cache
+            harus dilakukan oleh pemanggil (lihat hint di entrypoint.py).
+    """
+    cache_path = _CACHE_DIR / f"{_city_key(city)}.json"
+    if cache_path.exists():
+        print(f"[Research] Cache loaded: {cache_path}")
+        data = json.loads(cache_path.read_text(encoding="utf-8"))
+        print(f"[Research] {len(data)} fields collected")
         return data
-    except ImportError:
-        cache_path = Path(f"/tmp/research-output/{city}.json")
-        if cache_path.exists():
-            return json.loads(cache_path.read_text())
-        raise RuntimeError(
-            f"No hermes_tools and no cached data for {city}. "
-            "Run via Hermes agent or provide cached JSON first."
-        )
 
-
-def _build_research_prompt(city: str) -> str:
-    return f"""Anda adalah Research Agent. Kumpulkan data akurat tentang {city} di Sulawesi Selatan.
-
-Output HANYA JSON mentah, tanpa markdown, tanpa backtick, tanpa penjelasan.
-
-Field yang WAJIB diisi:
-- kota: "{city}"
-- tagline: string 3-5 kata
-- deskripsi_singkat: string 1-2 kalimat
-- overview: string 3-4 kalimat
-- tentang_kota_1 dict: judul, konten, info_tambahan (sejarah/budaya)
-- tentang_kota_2 dict: judul, konten, info_tambahan (ekonomi/potensi)
-- tentang_kota_3 dict: judul, konten, info_tambahan (wisata/landmark)
-- tentang_kota_4 dict: judul, konten, info_tambahan (kuliner/oleh-oleh)
-- keunggulan_kayu_dolken: array of 3 strings
-- aplikasi_konstruksi: array of 5 strings
-- aplikasi_dekorasi: array of 5 strings
-- studi_kasus_residensial: array of 4 objects (nama, lokasi, detail)
-- studi_kasus_publik: array of 2 objects (nama, lokasi, detail)
-- testimoni_residential: array of 4 objects (nama, lokasi, isi)
-- testimoni_komersial: array of 4 objects (profesi, area, isi)
-- relevansi_kayu_dolken dict: karakteristik_iklim, keunggulan_lokal, aplikasi_lokal
-- area_pengiriman: array of min 5 kecamatan nyata
-- area_kota_sekitar: array of 3 kota sekitar
-- landmark: array of 3 landmark
-"""
+    raise FileNotFoundError(
+        f"Cache research tidak ditemukan: {cache_path}. "
+        "Sebelum menjalankan entrypoint.py, bekukan JSON data kota ke file "
+        f"ini (lihat references/multi-agent-pipeline.md)."
+    )
 
 
 if __name__ == "__main__":
-    city = sys.argv[1] if len(sys.argv) > 1 else "Maros"
-    data = research(city)
-    print(json.dumps(data, ensure_ascii=False, indent=2))
+    city_arg = sys.argv[1] if len(sys.argv) > 1 else "Maros"
+    try:
+        data = research(city_arg)
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+    except FileNotFoundError as e:
+        print(str(e), file=sys.stderr)
+        sys.exit(1)

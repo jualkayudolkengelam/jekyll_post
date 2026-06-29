@@ -40,11 +40,16 @@
 # META INFORMATION (REQUIRED)
 # ============================================================================
 layout: node--post-with-city
-title: "Judul Artikel — Nama Kota —  Hubungi 0813-1140-0177 — Tagline"
-description: "Deskripsi meta untuk SEO, 150-160 karakter."
-excerpt: "Ringkasan singkat untuk tampilan grid/card."
-date: YYYY-MM-DD
-author: Admin
+# Judul Artikel — Nama Kota — Hubungi 0813-1140-0177 — Tagline
+title:
+# Deskripsi meta untuk SEO, 150-160 karakter.
+description:
+# Ringkasan singkat untuk tampilan grid/card.
+excerpt:
+# YYYY-MM-DD
+date:
+# Admin
+author:
 image: /assets/images/posts/jual-kayu-dolken-{nama_kota}/jual-kayu-dolken-{nama_kota}-001.webp
 image_alt: "Jual Kayu Dolken {Nama Kota} — kualitas premium"
 images:
@@ -64,12 +69,17 @@ review_count: 120
 author_url: https://jualkayudolken.com
 show_products: true
 keunggulan_durabilitas:
-  tahan_lama: "Isi dengan keunggulan daya tahan (contoh: tahan 20-30 tahun, anti rayap)"
-  kuat_padat: "Isi dengan keunggulan kekuatan dan kepadatan"
-  minim_perawatan: "Isi dengan keunggulan perawatan mudah"
+  # Isi dengan keunggulan daya tahan (contoh: tahan 20-30 tahun, anti rayap)
+  tahan_lama:
+  # Isi dengan keunggulan kekuatan dan kepadatan
+  kuat_padat:
+  # Isi dengan keunggulan perawatan mudah
+  minim_perawatan:
 keunggulan_nilai:
-  ramah_lingkungan: "Isi dengan keunggulan ramah lingkungan"
-  hemat_biaya: "Isi dengan keunggulan hemat biaya jangka panjang"
+  # Isi dengan keunggulan ramah lingkungan
+  ramah_lingkungan:
+  # Isi dengan keunggulan hemat biaya jangka panjang
+  hemat_biaya:
 nama_kota: "NamaKota"
 
 # ============================================================================
@@ -77,11 +87,16 @@ nama_kota: "NamaKota"
 # ============================================================================
 # Instruksi: Isi 5-10 area/kecamatan populer di kota ini
 area_pengiriman:
-  - "isi nama kecamatan/area populer #1"
-  - "isi nama kecamatan/area populer #2"
-  - "isi nama kecamatan/area populer #3"
-  - "isi nama kecamatan/area populer #4"
-  - "isi nama kecamatan/area populer #5"
+  # isi nama kecamatan/area populer #1
+  -
+  # isi nama kecamatan/area populer #2
+  -
+  # isi nama kecamatan/area populer #3
+  -
+  # isi nama kecamatan/area populer #4
+  -
+  # isi nama kecamatan/area populer #5
+  -
   # Tambahkan hingga 10 area jika perlu
 
 # ============================================================================
@@ -89,16 +104,22 @@ area_pengiriman:
 # ============================================================================
 # Instruksi: HARUS 3 items. Tulis keunggulan produk yang disesuaikan dengan kota
 keunggulan_produk:
-  - judul: "berikan judul keunggulan produk #1 (misal: Kualitas Premium, Tahan Lama, dll)"
-    deskripsi: "jelaskan keunggulan ini, sesuaikan dengan karakteristik iklim/kondisi kota (misal: cocok untuk iklim pesisir/dataran tinggi/metropolitan)"
+  # berikan judul keunggulan produk #1 (misal: Kualitas Premium, Tahan Lama, dll)
+  - judul:
+    # jelaskan keunggulan ini, sesuaikan dengan karakteristik iklim/kondisi kota (misal: cocok untuk iklim pesisir/dataran tinggi/metropolitan)
+    deskripsi:
     warna: "warning"
     icon: "bi-award-fill"
-  - judul: "berikan judul keunggulan produk #2 (misal: Harga Terjangkau, Harga Terbaik, dll)"
-    deskripsi: "jelaskan keunggulan harga, mention harga mulai Rp 15.000/batang atau sesuaikan dengan market kota"
+  # berikan judul keunggulan produk #2 (misal: Harga Terjangkau, Harga Terbaik, dll)
+  - judul:
+    # jelaskan keunggulan harga, mention harga mulai Rp 15.000/batang atau sesuaikan dengan market kota
+    deskripsi:
     warna: "danger"
     icon: "bi-cash-coin"
-  - judul: "berikan judul keunggulan produk #3 (misal: Stok Lengkap, Selalu Ready, dll)"
-    deskripsi: "jelaskan ketersediaan stok, mention diameter yang tersedia (2-12 cm)"
+  # berikan judul keunggulan produk #3 (misal: Stok Lengkap, Selalu Ready, dll)
+  - judul:
+    # jelaskan ketersediaan stok, mention diameter yang tersedia (2-12 cm)
+    deskripsi:
     warna: "info"
     icon: "bi-boxes"
 
@@ -107,16 +128,22 @@ keunggulan_produk:
 # ============================================================================
 # Instruksi: HARUS 3 items. Tulis keunggulan layanan yang disesuaikan dengan kota
 keunggulan_layanan:
-  - judul: "berikan judul keunggulan layanan #1 (misal: Pengiriman Gratis [Nama Kota], Free Ongkir [Kota], dll)"
-    deskripsi: "jelaskan keunggulan pengiriman gratis, mention area kota yang dicakup, benefit untuk customer"
+  # berikan judul keunggulan layanan #1 (misal: Pengiriman Gratis [Nama Kota], Free Ongkir [Kota], dll)
+  - judul:
+    # jelaskan keunggulan pengiriman gratis, mention area kota yang dicakup, benefit untuk customer
+    deskripsi:
     warna: "success"
     icon: "bi-truck"
-  - judul: "berikan judul keunggulan layanan #2 (misal: COD Tersedia, Bayar di Tempat, dll)"
-    deskripsi: "jelaskan sistem pembayaran COD, benefit aman untuk customer, cek kualitas dulu"
+  # berikan judul keunggulan layanan #2 (misal: COD Tersedia, Bayar di Tempat, dll)
+  - judul:
+    # jelaskan sistem pembayaran COD, benefit aman untuk customer, cek kualitas dulu
+    deskripsi:
     warna: "primary"
     icon: "bi-shield-check"
-  - judul: "berikan judul keunggulan layanan #3 (misal: Fast Response, Konsultasi Gratis, dll)"
-    deskripsi: "jelaskan layanan konsultasi/response cepat, mention 24/7 atau waktu operasional"
+  # berikan judul keunggulan layanan #3 (misal: Fast Response, Konsultasi Gratis, dll)
+  - judul:
+    # jelaskan layanan konsultasi/response cepat, mention 24/7 atau waktu operasional
+    deskripsi:
     warna: "secondary"
     icon: "bi-headset"
 
@@ -125,46 +152,68 @@ keunggulan_layanan:
 # ============================================================================
 # Instruksi: Semua field di bawah HARUS ditulis manual sesuai karakteristik kota
 area_pengiriman_detail:
-  judul_jangkauan: "berikan judul untuk jangkauan pengiriman di kota ini"
-  deskripsi_jangkauan: "jelaskan area mana saja yang dilayani di kota ini, mention gratis ongkir dan jumlah kecamatan"
+  # berikan judul untuk jangkauan pengiriman di kota ini
+  judul_jangkauan:
+  # jelaskan area mana saja yang dilayani di kota ini, mention gratis ongkir dan jumlah kecamatan
+  deskripsi_jangkauan:
 
-  judul_pusat: "berikan judul untuk wilayah pusat kota ini"
-  deskripsi_pusat: "jelaskan mengapa wilayah pusat kota ini strategis, mention jumlah kecamatan dan akses mudah"
+  # berikan judul untuk wilayah pusat kota ini
+  judul_pusat:
+  # jelaskan mengapa wilayah pusat kota ini strategis, mention jumlah kecamatan dan akses mudah
+  deskripsi_pusat:
 
-  judul_utara_selatan: "berikan judul untuk wilayah utara & selatan (OPTIONAL - hapus jika tidak relevan)"
-  deskripsi_utara_selatan: "jelaskan karakteristik wilayah utara & selatan kota ini (OPTIONAL - hapus jika tidak ada)"
+  # berikan judul untuk wilayah utara & selatan (OPTIONAL - hapus jika tidak relevan)
+  judul_utara_selatan:
+  # jelaskan karakteristik wilayah utara & selatan kota ini (OPTIONAL - hapus jika tidak ada)
+  deskripsi_utara_selatan:
 
-  judul_pengembangan: "berikan judul untuk wilayah pengembangan/pinggiran kota ini"
-  deskripsi_pengembangan: "jelaskan karakteristik area pengembangan, mention pertumbuhan dan potensi"
+  # berikan judul untuk wilayah pengembangan/pinggiran kota ini
+  judul_pengembangan:
+  # jelaskan karakteristik area pengembangan, mention pertumbuhan dan potensi
+  deskripsi_pengembangan:
 
-  judul_lainnya: "berikan judul untuk kecamatan lainnya (OPTIONAL - hapus jika tidak perlu)"
+  # berikan judul untuk kecamatan lainnya (OPTIONAL - hapus jika tidak perlu)
+  judul_lainnya:
 
-  judul_landmark: "berikan judul untuk landmark & lokasi strategis di kota ini"
-  deskripsi_landmark: "jelaskan mengapa landmark ini penting untuk proyek komersial"
+  # berikan judul untuk landmark & lokasi strategis di kota ini
+  judul_landmark:
+  # jelaskan mengapa landmark ini penting untuk proyek komersial
+  deskripsi_landmark:
 
-  judul_wisata: "berikan judul untuk destinasi wisata di kota ini"
-  deskripsi_wisata: "jelaskan landmark wisata dan sejarah yang terkenal di kota ini"
+  # berikan judul untuk destinasi wisata di kota ini
+  judul_wisata:
+  # jelaskan landmark wisata dan sejarah yang terkenal di kota ini
+  deskripsi_wisata:
 
-  judul_fasilitas: "berikan judul untuk fasilitas pendidikan & komersial di kota ini"
-  deskripsi_fasilitas: "jelaskan fasilitas strategis seperti kampus, mall, pelabuhan di kota ini"
+  # berikan judul untuk fasilitas pendidikan & komersial di kota ini
+  judul_fasilitas:
+  # jelaskan fasilitas strategis seperti kampus, mall, pelabuhan di kota ini
+  deskripsi_fasilitas:
 
 # ============================================================================
 # AREA PENGIRIMAN DETAIL - WILAYAH PUSAT (REQUIRED - min 3 items)
 # ============================================================================
 # Instruksi: Research kecamatan NYATA di pusat kota ini, cari kelurahan yang ada
   wilayah_pusat:
-    - nama: "isi nama kecamatan pusat #1"
+    # isi nama kecamatan pusat #1
+    - nama:
       kelurahan:
-        - "isi 3-5 kelurahan di kecamatan ini"
-        - "isi kelurahan lainnya (bisa gabung beberapa dengan koma)"
+        # isi 3-5 kelurahan di kecamatan ini
+        -
+        # isi kelurahan lainnya (bisa gabung beberapa dengan koma)
+        -
       warna: "primary"
-    - nama: "isi nama kecamatan pusat #2"
+    # isi nama kecamatan pusat #2
+    - nama:
       kelurahan:
-        - "isi 3-5 kelurahan di kecamatan ini"
+        # isi 3-5 kelurahan di kecamatan ini
+        -
       warna: "success"
-    - nama: "isi nama kecamatan pusat #3"
+    # isi nama kecamatan pusat #3
+    - nama:
       kelurahan:
-        - "isi 3-5 kelurahan di kecamatan ini"
+        # isi 3-5 kelurahan di kecamatan ini
+        -
       warna: "info"
     # Tambah lebih banyak jika perlu (5-7 kecamatan ideal)
 
@@ -173,13 +222,17 @@ area_pengiriman_detail:
 # ============================================================================
 # Instruksi: Hapus section ini jika kota tidak punya pembagian utara-selatan yang jelas
   wilayah_utara_selatan:
-    - nama: "isi nama kecamatan di bagian utara kota"
+    # isi nama kecamatan di bagian utara kota
+    - nama:
       kelurahan:
-        - "isi kelurahan di kecamatan ini"
+        # isi kelurahan di kecamatan ini
+        -
       warna: "danger"
-    - nama: "isi nama kecamatan di bagian selatan kota"
+    # isi nama kecamatan di bagian selatan kota
+    - nama:
       kelurahan:
-        - "isi kelurahan di kecamatan ini"
+        # isi kelurahan di kecamatan ini
+        -
       warna: "warning"
 
 # ============================================================================
@@ -187,17 +240,23 @@ area_pengiriman_detail:
 # ============================================================================
 # Instruksi: Isi kecamatan yang sedang berkembang/pinggiran kota
   wilayah_pengembangan:
-    - nama: "isi nama kecamatan pengembangan #1"
+    # isi nama kecamatan pengembangan #1
+    - nama:
       kelurahan:
-        - "isi kelurahan di kecamatan ini"
+        # isi kelurahan di kecamatan ini
+        -
       warna: "primary"
-    - nama: "isi nama kecamatan pengembangan #2"
+    # isi nama kecamatan pengembangan #2
+    - nama:
       kelurahan:
-        - "isi kelurahan di kecamatan ini"
+        # isi kelurahan di kecamatan ini
+        -
       warna: "info"
-    - nama: "isi nama kecamatan pengembangan #3"
+    # isi nama kecamatan pengembangan #3
+    - nama:
       kelurahan:
-        - "isi kelurahan di kecamatan ini"
+        # isi kelurahan di kecamatan ini
+        -
       warna: "wood"
 
 # ============================================================================
@@ -205,22 +264,28 @@ area_pengiriman_detail:
 # ============================================================================
 # Instruksi: Isi kecamatan tambahan yang tidak masuk kategori lain (OPTIONAL - bisa dihapus)
   kecamatan_lainnya:
-    - "isi nama kecamatan tambahan #1"
-    - "isi nama kecamatan tambahan #2"
-    - "isi nama kecamatan tambahan #3"
+    # isi nama kecamatan tambahan #1
+    -
+    # isi nama kecamatan tambahan #2
+    -
+    # isi nama kecamatan tambahan #3
+    -
 
 # ============================================================================
 # AREA PENGIRIMAN DETAIL - LANDMARK WISATA (REQUIRED - min 3 items)
 # ============================================================================
 # Instruksi: Isi landmark WISATA dan sejarah yang terkenal di kota ini
   landmark_wisata:
-    - nama: "isi nama landmark wisata/sejarah #1"
+    # isi nama landmark wisata/sejarah #1
+    - nama:
       icon: "bi-building"
       warna: "warning"
-    - nama: "isi nama landmark wisata/sejarah #2"
+    # isi nama landmark wisata/sejarah #2
+    - nama:
       icon: "bi-building"
       warna: "warning"
-    - nama: "isi nama landmark wisata/sejarah #3"
+    # isi nama landmark wisata/sejarah #3
+    - nama:
       icon: "bi-building"
       warna: "warning"
 
@@ -229,13 +294,16 @@ area_pengiriman_detail:
 # ============================================================================
 # Instruksi: Isi fasilitas strategis seperti mall, kampus, pelabuhan di kota ini
   landmark_fasilitas:
-    - nama: "isi nama mall/pusat perbelanjaan terkenal"
+    # isi nama mall/pusat perbelanjaan terkenal
+    - nama:
       icon: "bi-cart"
       warna: "info"
-    - nama: "isi nama mall/pusat perbelanjaan lainnya"
+    # isi nama mall/pusat perbelanjaan lainnya
+    - nama:
       icon: "bi-cart"
       warna: "primary"
-    - nama: "isi nama kampus/universitas/pelabuhan terkenal"
+    # isi nama kampus/universitas/pelabuhan terkenal
+    - nama:
       icon: "bi-mortarboard"  # gunakan bi-shop untuk pelabuhan
       warna: "success"
 
@@ -244,39 +312,57 @@ area_pengiriman_detail:
 # ============================================================================
 # Instruksi: Format lama (object), OPTIONAL - bisa dihapus jika pakai keunggulan_kayu_dolken (array) di bawah
 keunggulan_durabilitas:
-  tahan_lama: "jelaskan daya tahan kayu gelam 20-30 tahun, sesuaikan dengan iklim kota ini"
-  anti_rayap: "jelaskan keunggulan anti rayap natural tanpa obat"
-  tahan_cuaca: "jelaskan cocok untuk outdoor/indoor, tahan hujan/panas, mention karakteristik cuaca kota ini"
-  kuat_padat: "jelaskan kepadatan tinggi, cocok untuk beban berat"
+  # jelaskan daya tahan kayu gelam 20-30 tahun, sesuaikan dengan iklim kota ini
+  tahan_lama:
+  # jelaskan keunggulan anti rayap natural tanpa obat
+  anti_rayap:
+  # jelaskan cocok untuk outdoor/indoor, tahan hujan/panas, mention karakteristik cuaca kota ini
+  tahan_cuaca:
+  # jelaskan kepadatan tinggi, cocok untuk beban berat
+  kuat_padat:
 
 keunggulan_nilai:
-  ramah_lingkungan: "jelaskan material natural, sustainable, mendukung green building"
-  estetika: "jelaskan warna natural coklat, cocok untuk dekorasi modern/tradisional"
+  # jelaskan material natural, sustainable, mendukung green building
+  ramah_lingkungan:
+  # jelaskan warna natural coklat, cocok untuk dekorasi modern/tradisional
+  estetika:
 
 # Format Array (lebih baru, direkomendasikan) - HARUS 6 items
 keunggulan_kayu_dolken:
-  - judul: "berikan judul keunggulan #1 (misal: Tahan Lama, Awet Puluhan Tahun, dll)"
-    deskripsi: "jelaskan daya tahan 20-30 tahun tanpa treatment, sesuaikan dengan iklim kota ini (pesisir/dataran tinggi/metropolitan)"
+  # berikan judul keunggulan #1 (misal: Tahan Lama, Awet Puluhan Tahun, dll)
+  - judul:
+    # jelaskan daya tahan 20-30 tahun tanpa treatment, sesuaikan dengan iklim kota ini (pesisir/dataran tinggi/metropolitan)
+    deskripsi:
     warna: "success"
     icon: "bi-clock-history"
-  - judul: "berikan judul keunggulan #2 (misal: Anti Rayap, Tahan Hama, dll)"
-    deskripsi: "jelaskan tidak perlu obat anti rayap, tekstur padat menolak rayap natural"
+  # berikan judul keunggulan #2 (misal: Anti Rayap, Tahan Hama, dll)
+  - judul:
+    # jelaskan tidak perlu obat anti rayap, tekstur padat menolak rayap natural
+    deskripsi:
     warna: "danger"
     icon: "bi-bug"
-  - judul: "berikan judul keunggulan #3 (misal: Tahan Cuaca, Tahan Air, dll)"
-    deskripsi: "jelaskan cocok outdoor/indoor, tahan hujan/panas/lembab, mention kondisi cuaca kota ini"
+  # berikan judul keunggulan #3 (misal: Tahan Cuaca, Tahan Air, dll)
+  - judul:
+    # jelaskan cocok outdoor/indoor, tahan hujan/panas/lembab, mention kondisi cuaca kota ini
+    deskripsi:
     warna: "primary"
     icon: "bi-cloud-rain"
-  - judul: "berikan judul keunggulan #4 (misal: Kuat & Padat, Super Kuat, dll)"
-    deskripsi: "jelaskan kepadatan tinggi, kekuatan maksimal, cocok beban berat dan struktur penyangga"
+  # berikan judul keunggulan #4 (misal: Kuat & Padat, Super Kuat, dll)
+  - judul:
+    # jelaskan kepadatan tinggi, kekuatan maksimal, cocok beban berat dan struktur penyangga
+    deskripsi:
     warna: "warning"
     icon: "bi-hammer"
-  - judul: "berikan judul keunggulan #5 (misal: Ramah Lingkungan, Eco-Friendly, dll)"
-    deskripsi: "jelaskan material natural sustainable, biodegradable, mendukung green building"
+  # berikan judul keunggulan #5 (misal: Ramah Lingkungan, Eco-Friendly, dll)
+  - judul:
+    # jelaskan material natural sustainable, biodegradable, mendukung green building
+    deskripsi:
     warna: "success"
     icon: "bi-recycle"
-  - judul: "berikan judul keunggulan #6 (misal: Estetika Natural, Cantik Alami, dll)"
-    deskripsi: "jelaskan warna coklat natural indah, cocok dekorasi modern/tradisional, mempercantik bangunan"
+  # berikan judul keunggulan #6 (misal: Estetika Natural, Cantik Alami, dll)
+  - judul:
+    # jelaskan warna coklat natural indah, cocok dekorasi modern/tradisional, mempercantik bangunan
+    deskripsi:
     warna: "info"
     icon: "bi-palette"
 
@@ -286,47 +372,71 @@ keunggulan_kayu_dolken:
 # Instruksi: Format sudah ditentukan (jumlah kata judul, jumlah item aplikasi)
 # Tulis konten sesuai format yang sudah ditetapkan
 aplikasi_kayu_dolken:
-  deskripsi: "tulis deskripsi 1 kalimat tentang fleksibilitas kayu dolken untuk berbagai aplikasi"
+  # tulis deskripsi 1 kalimat tentang fleksibilitas kayu dolken untuk berbagai aplikasi
+  deskripsi:
 
   konstruksi_dekorasi:
-    - judul: "berikan judul 3 kata, gunakan tanda & (misal: Konstruksi & Bangunan)"
+    # berikan judul 3 kata, gunakan tanda & (misal: Konstruksi & Bangunan)
+    - judul:
       icon: "bi-building"
       warna: "wood"
       aplikasi:
-        - "isi aplikasi konstruksi #1"
-        - "isi aplikasi konstruksi #2"
-        - "isi aplikasi konstruksi #3"
-        - "isi aplikasi konstruksi #4"
-        - "isi aplikasi konstruksi #5"
-    - judul: "berikan judul 3 kata, gunakan tanda & (misal: Dekorasi & Landscaping)"
+        # isi aplikasi konstruksi #1
+        -
+        # isi aplikasi konstruksi #2
+        -
+        # isi aplikasi konstruksi #3
+        -
+        # isi aplikasi konstruksi #4
+        -
+        # isi aplikasi konstruksi #5
+        -
+    # berikan judul 3 kata, gunakan tanda & (misal: Dekorasi & Landscaping)
+    - judul:
       icon: "bi-palette-fill"
       warna: "primary"
       aplikasi:
-        - "isi aplikasi dekorasi #1"
-        - "isi aplikasi dekorasi #2"
-        - "isi aplikasi dekorasi #3"
-        - "isi aplikasi dekorasi #4"
-        - "isi aplikasi dekorasi #5"
+        # isi aplikasi dekorasi #1
+        -
+        # isi aplikasi dekorasi #2
+        -
+        # isi aplikasi dekorasi #3
+        -
+        # isi aplikasi dekorasi #4
+        -
+        # isi aplikasi dekorasi #5
+        -
 
   furniture_komersial:
-    - judul: "berikan judul 3 kata, gunakan tanda & (misal: Furniture & Lainnya)"
+    # berikan judul 3 kata, gunakan tanda & (misal: Furniture & Lainnya)
+    - judul:
       icon: "bi-chair-fill"
       warna: "info"
       aplikasi:
-        - "isi aplikasi furniture #1"
-        - "isi aplikasi furniture #2"
-        - "isi aplikasi furniture #3"
-        - "isi aplikasi furniture #4"
-        - "isi aplikasi furniture #5"
+        # isi aplikasi furniture #1
+        -
+        # isi aplikasi furniture #2
+        -
+        # isi aplikasi furniture #3
+        -
+        # isi aplikasi furniture #4
+        -
+        # isi aplikasi furniture #5
+        -
 
-    - judul: "berikan judul 2-3 kata tentang proyek (misal: Proyek Komersial, Klien Terpercaya)"
+    # berikan judul 2-3 kata tentang proyek (misal: Proyek Komersial, Klien Terpercaya)
+    - judul:
       icon: "bi-briefcase-fill"
       warna: "success"
-      deskripsi: "tulis deskripsi 1 kalimat tentang kepercayaan dari klien komersial"
+      # tulis deskripsi 1 kalimat tentang kepercayaan dari klien komersial
+      deskripsi:
       aplikasi:
-        - "Hotel di (isi nama area populer NYATA di kota ini)"
-        - "Cafe di (isi nama area populer NYATA di kota ini)"
-        - "Restoran di area (isi nama area populer NYATA di kota ini)"
+        # Hotel di (isi nama area populer NYATA di kota ini)
+        -
+        # Cafe di (isi nama area populer NYATA di kota ini)
+        -
+        # Restoran di area (isi nama area populer NYATA di kota ini)
+        -
         - "Mall & apartment"
         - "Developer perumahan"
 
@@ -335,18 +445,23 @@ aplikasi_kayu_dolken:
 # ============================================================================
 # Instruksi: Ini generic, boleh pakai langsung
 proses_awal_pemesanan:
-  pilih_ukuran: "Lihat daftar produk lengkap di atas, pilih diameter sesuai kebutuhan proyek Anda"
+  # Lihat daftar produk lengkap di atas, pilih diameter sesuai kebutuhan proyek Anda
+  pilih_ukuran:
   hubungi: "081311400177"
-  konsultasi_gratis: "Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik untuk proyek Anda"
+  # Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik untuk proyek Anda
+  konsultasi_gratis:
 
 # ============================================================================
 # PROSES PEMESANAN - FINALISASI & PENGIRIMAN (REQUIRED)
 # ============================================================================
 # Instruksi: Sesuaikan dengan nama kota
 finalisasi_pengiriman:
-  konfirmasi_pesanan: "tulis konfirmasi pesanan, mention pastikan jumlah/ukuran/alamat di (nama kota) sudah benar"
-  pengiriman_gratis: "jelaskan pengiriman gratis, armada terpercaya, mention ke area kota ini, tepat waktu"
-  bayar_cod: "jelaskan sistem COD, bayar setelah barang sampai dan dicek kualitas, aman tanpa risiko"
+  # tulis konfirmasi pesanan, mention pastikan jumlah/ukuran/alamat di (nama kota) sudah benar
+  konfirmasi_pesanan:
+  # jelaskan pengiriman gratis, armada terpercaya, mention ke area kota ini, tepat waktu
+  pengiriman_gratis:
+  # jelaskan sistem COD, bayar setelah barang sampai dan dicek kualitas, aman tanpa risiko
+  bayar_cod:
 
 # ============================================================================
 # STUDI KASUS PROYEK - KOMERSIAL (REQUIRED - min 4 items)
@@ -354,36 +469,56 @@ finalisasi_pengiriman:
 # Instruksi: HARUS custom per kota! Gunakan lokasi SPESIFIK yang ada di kota ini
 studi_kasus_proyek:
   proyek_komersial:
-    - judul: "tulis nama proyek komersial dengan lokasi spesifik di kota ini (misal: Gazebo Hotel di Area X)"
+    # tulis nama proyek komersial dengan lokasi spesifik di kota ini (misal: Gazebo Hotel di Area X)
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek: lokasi spesifik, apa yang dibangun, siapa klien (boleh samaran), hasil akhir"
-      jumlah: "isi jumlah batang yang digunakan (misal: 150 batang)"
-      diameter: "isi diameter yang digunakan (misal: 8-10 cm)"
-      hasil: "jelaskan hasil akhir proyek dan feedback positif"
+      # jelaskan detail proyek: lokasi spesifik, apa yang dibangun, siapa klien (boleh samaran), hasil akhir
+      deskripsi:
+      # isi jumlah batang yang digunakan (misal: 150 batang)
+      jumlah:
+      # isi diameter yang digunakan (misal: 8-10 cm)
+      diameter:
+      # jelaskan hasil akhir proyek dan feedback positif
+      hasil:
       warna: "primary"
       icon: "bi-building"
-    - judul: "tulis nama proyek komersial #2 dengan lokasi berbeda"
+    # tulis nama proyek komersial #2 dengan lokasi berbeda
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek kedua"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil akhir"
+      # jelaskan detail proyek kedua
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil akhir
+      hasil:
       warna: "warning"
       icon: "bi-tree"
-    - judul: "tulis nama proyek komersial #3 dengan lokasi berbeda"
+    # tulis nama proyek komersial #3 dengan lokasi berbeda
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek ketiga"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil akhir"
+      # jelaskan detail proyek ketiga
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil akhir
+      hasil:
       warna: "success"
       icon: "bi-shop"
-    - judul: "tulis nama proyek komersial #4 dengan lokasi berbeda"
+    # tulis nama proyek komersial #4 dengan lokasi berbeda
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek keempat"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil akhir"
+      # jelaskan detail proyek keempat
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil akhir
+      hasil:
       warna: "danger"
       icon: "bi-building-add"
 
@@ -392,36 +527,56 @@ studi_kasus_proyek:
 # ============================================================================
 # Instruksi: HARUS custom per kota! Gunakan nama area/kecamatan NYATA di kota ini
   proyek_residensial:
-    - judul: "tulis nama proyek residensial dengan area spesifik (misal: Pagar Villa di Kecamatan X)"
+    # tulis nama proyek residensial dengan area spesifik (misal: Pagar Villa di Kecamatan X)
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek: lokasi, tipe bangunan, hasil"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil dan kepuasan klien"
+      # jelaskan detail proyek: lokasi, tipe bangunan, hasil
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil dan kepuasan klien
+      hasil:
       warna: "success"
       icon: "bi-house-door"
-    - judul: "tulis nama proyek residensial #2"
+    # tulis nama proyek residensial #2
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek kedua"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil"
+      # jelaskan detail proyek kedua
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil
+      hasil:
       warna: "success"
       icon: "bi-sun"
-    - judul: "tulis nama proyek residensial #3"
+    # tulis nama proyek residensial #3
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek ketiga"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil"
+      # jelaskan detail proyek ketiga
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil
+      hasil:
       warna: "info"
       icon: "bi-tree-fill"
-    - judul: "tulis nama proyek residensial #4"
+    # tulis nama proyek residensial #4
+    - judul:
       tahun: "2024"
-      deskripsi: "jelaskan detail proyek keempat"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil"
+      # jelaskan detail proyek keempat
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil
+      hasil:
       warna: "success"
       icon: "bi-house-heart-fill"
 
@@ -430,12 +585,17 @@ studi_kasus_proyek:
 # ============================================================================
 # Instruksi: OPTIONAL - hapus jika tidak ada proyek publik. Gunakan lokasi NYATA
   proyek_publik:
-    - judul: "tulis nama proyek publik jika ada (misal: Taman Kota di Area X)"
+    # tulis nama proyek publik jika ada (misal: Taman Kota di Area X)
+    - judul:
       tahun: "2023"
-      deskripsi: "jelaskan detail proyek publik"
-      jumlah: "isi jumlah batang"
-      diameter: "isi diameter"
-      hasil: "jelaskan hasil dan manfaat untuk publik"
+      # jelaskan detail proyek publik
+      deskripsi:
+      # isi jumlah batang
+      jumlah:
+      # isi diameter
+      diameter:
+      # jelaskan hasil dan manfaat untuk publik
+      hasil:
       warna: "info"
       icon: "bi-signpost-2"
 
@@ -444,17 +604,25 @@ studi_kasus_proyek:
 # ============================================================================
 # Instruksi: HARUS custom per kota! Gunakan nama area/kecamatan NYATA di kota ini
 testimoni_residential:
-  - nama: "tulis nama customer (misal: Pak Budi, Ibu Sari)"
-    lokasi: "isi nama area/kecamatan NYATA di kota ini"
+  # tulis nama customer (misal: Pak Budi, Ibu Sari)
+  - nama:
+    # isi nama area/kecamatan NYATA di kota ini
+    lokasi:
     rating: 5
-    judul: "tulis judul testimoni singkat tentang aspek yang dipuji (misal: Kualitas Terjamin)"
-    komentar: "tulis testimoni yang natural dan personal, mention lokasi dan pengalaman spesifik"
+    # tulis judul testimoni singkat tentang aspek yang dipuji (misal: Kualitas Terjamin)
+    judul:
+    # tulis testimoni yang natural dan personal, mention lokasi dan pengalaman spesifik
+    komentar:
     warna: "primary"
-  - nama: "tulis nama customer #2"
-    lokasi: "isi nama area NYATA lainnya di kota ini"
+  # tulis nama customer #2
+  - nama:
+    # isi nama area NYATA lainnya di kota ini
+    lokasi:
     rating: 5
-    judul: "tulis judul testimoni"
-    komentar: "tulis testimoni natural"
+    # tulis judul testimoni
+    judul:
+    # tulis testimoni natural
+    komentar:
     warna: "success"
 
 # ============================================================================
@@ -462,29 +630,45 @@ testimoni_residential:
 # ============================================================================
 # Instruksi: HARUS custom per kota! Gunakan profesi/bisnis yang relevan dengan kota
 testimoni_komersial:
-  - nama: "tulis nama customer komersial (misal: Pak Anton)"
-    lokasi: "isi profesi/bisnis (misal: Owner Cafe di Area X)"
+  # tulis nama customer komersial (misal: Pak Anton)
+  - nama:
+    # isi profesi/bisnis (misal: Owner Cafe di Area X)
+    lokasi:
     rating: 5
-    judul: "tulis judul testimoni"
-    komentar: "tulis testimoni dari sudut pandang bisnis/komersial"
+    # tulis judul testimoni
+    judul:
+    # tulis testimoni dari sudut pandang bisnis/komersial
+    komentar:
     warna: "warning"
-  - nama: "tulis nama customer komersial #2"
-    lokasi: "isi profesi/bisnis"
+  # tulis nama customer komersial #2
+  - nama:
+    # isi profesi/bisnis
+    lokasi:
     rating: 5
-    judul: "tulis judul testimoni"
-    komentar: "tulis testimoni"
+    # tulis judul testimoni
+    judul:
+    # tulis testimoni
+    komentar:
     warna: "info"
-  - nama: "tulis nama customer komersial #3"
-    lokasi: "isi profesi/bisnis"
+  # tulis nama customer komersial #3
+  - nama:
+    # isi profesi/bisnis
+    lokasi:
     rating: 5
-    judul: "tulis judul testimoni"
-    komentar: "tulis testimoni"
+    # tulis judul testimoni
+    judul:
+    # tulis testimoni
+    komentar:
     warna: "success"
-  - nama: "tulis nama customer komersial #4"
-    lokasi: "isi profesi/bisnis"
+  # tulis nama customer komersial #4
+  - nama:
+    # isi profesi/bisnis
+    lokasi:
     rating: 5
-    judul: "tulis judul testimoni"
-    komentar: "tulis testimoni"
+    # tulis judul testimoni
+    judul:
+    # tulis testimoni
+    komentar:
     warna: "primary"
 
 # ============================================================================
@@ -529,10 +713,12 @@ tips_ukuran:
 # ini Contoh, silahkan gati kata - katanya.
 faq_pemesanan:
   - pertanyaan: "Berapa minimal pemesanan kayu dolken?"
-    jawaban: "sesuaikan jawaban: mention melayani mulai 10 batang, untuk kota ini berikan harga khusus, hubungi 081311400177"
+    # sesuaikan jawaban: mention melayani mulai 10 batang, untuk kota ini berikan harga khusus, hubungi 081311400177
+    jawaban:
     icon: "bi-cart-check"
   - pertanyaan: "Bagaimana cara mengecek kualitas kayu dolken sebelum bayar?"
-    jawaban: "jelaskan sistem COD, apa yang perlu dicek (tidak bengkok, tidak retak, diameter sesuai), dan bahwa tim akan dampingi pengecekan"
+    # jelaskan sistem COD, apa yang perlu dicek (tidak bengkok, tidak retak, diameter sesuai), dan bahwa tim akan dampingi pengecekan
+    jawaban:
     icon: "bi-clipboard-check"
 
 # ============================================================================
@@ -541,10 +727,12 @@ faq_pemesanan:
 # Instruksi: Sesuaikan jawaban dengan karakteristik IKLIM dan AREA kota ini
 faq_produk:
   - pertanyaan: "Apakah kayu dolken perlu perawatan khusus di {nama_kota}?"
-    jawaban: "jelaskan: tidak perlu perawatan khusus, cocok untuk iklim (sebutkan karakteristik iklim kota ini: pesisir/dataran tinggi/metropolitan/dll), untuk aplikasi outdoor di (sebutkan area spesifik kota ini) bisa tambah coating"
+    # jelaskan: tidak perlu perawatan khusus, cocok untuk iklim (sebutkan karakteristik iklim kota ini: pesisir/dataran tinggi/metropolitan/dll), untuk aplikasi outdoor di (sebutkan area spesifik kota ini) bisa tambah coating
+    jawaban:
     icon: "bi-tools"
   - pertanyaan: "Apakah bisa custom panjang kayu dolken?"
-    jawaban: "jelaskan: ya bisa custom, standar 4 meter, bisa disesuaikan untuk proyek spesifik di kota ini, hubungi 081311400177"
+    # jelaskan: ya bisa custom, standar 4 meter, bisa disesuaikan untuk proyek spesifik di kota ini, hubungi 081311400177
+    jawaban:
     icon: "bi-rulers"
 
 # ============================================================================
@@ -553,7 +741,8 @@ faq_produk:
 # Instruksi: Sesuaikan dengan area-area NYATA di kota ini
 faq_pengiriman:
   - pertanyaan: "Berapa lama pengiriman ke {nama_kota}?"
-    jawaban: "jelaskan: untuk area kota ini pengiriman 1-3 hari kerja, gratis ongkir untuk seluruh wilayah termasuk (sebutkan 3-4 area populer NYATA di kota ini), pakai armada terpercaya"
+    # jelaskan: untuk area kota ini pengiriman 1-3 hari kerja, gratis ongkir untuk seluruh wilayah termasuk (sebutkan 3-4 area populer NYATA di kota ini), pakai armada terpercaya
+    jawaban:
     icon: "bi-truck"
 
 # ============================================================================
@@ -561,16 +750,21 @@ faq_pengiriman:
 # ============================================================================
 # Instruksi: HARUS disesuaikan dengan karakteristik UNIK kota ini
 relevansi_kayu_dolken:
-  karakteristik_iklim: "jelaskan karakteristik kota ini (misal: kota pesisir dengan kelembaban tinggi, kota dataran tinggi dengan curah hujan tinggi, kota metropolitan dengan polusi, dll) dan mengapa kayu dolken cocok"
+  # jelaskan karakteristik kota ini (misal: kota pesisir dengan kelembaban tinggi, kota dataran tinggi dengan curah hujan tinggi, kota metropolitan dengan polusi, dll) dan mengapa kayu dolken cocok
+  karakteristik_iklim:
   keunggulan_lokal: "Sifat kayu yang <strong>tahan air, tahan rayap, dan tahan cuaca ekstrem</strong> sangat cocok untuk aplikasi seperti:"
   aplikasi_lokal:
-    - nama: "isi aplikasi dengan lokasi SPESIFIK di kota ini (misal: Gazebo di Area X)"
+    # isi aplikasi dengan lokasi SPESIFIK di kota ini (misal: Gazebo di Area X)
+    - nama:
       icon: "bi-check-circle-fill"
-    - nama: "isi aplikasi dengan lokasi SPESIFIK #2"
+    # isi aplikasi dengan lokasi SPESIFIK #2
+    - nama:
       icon: "bi-check-circle-fill"
-    - nama: "isi aplikasi dengan lokasi SPESIFIK #3"
+    # isi aplikasi dengan lokasi SPESIFIK #3
+    - nama:
       icon: "bi-check-circle-fill"
-    - nama: "isi aplikasi dengan landmark SPESIFIK (misal: Landscaping di Landmark X)"
+    # isi aplikasi dengan landmark SPESIFIK (misal: Landscaping di Landmark X)
+    - nama:
       icon: "bi-check-circle-fill"
 
 # ============================================================================
@@ -581,57 +775,94 @@ relevansi_kayu_dolken:
 # - Format HARUS sesuai yang ditentukan (4 cards dengan struktur tertentu)
 # - Jangan dipaksa menulis topik spesifik, tapi format harus konsisten
 tentang_kota:
-  tagline: "tulis tagline singkat 3-5 kata untuk kota ini"
-  deskripsi_singkat: "tulis deskripsi 1 kalimat tentang peran/karakteristik kota ini"
-  overview: "tulis overview 2-3 kalimat: deskripsi umum, luas wilayah (X km²), populasi (X juta jiwa), jumlah kecamatan & kelurahan"
+  # tulis tagline singkat 3-5 kata untuk kota ini
+  tagline:
+  # tulis deskripsi 1 kalimat tentang peran/karakteristik kota ini
+  deskripsi_singkat:
+  # tulis overview 2-3 kalimat: deskripsi umum, luas wilayah (X km²), populasi (X juta jiwa), jumlah kecamatan & kelurahan
+  overview:
 
   # REQUIRED: EXACTLY 2 cards - Topik bebas, format tetap!
   # Card bisa tentang: sejarah, ekonomi, budaya, kuliner, wisata, atau apapun menarik dari kota ini
   tentang_kota_1:
-    - judul: "tulis judul tentang aspek kota #1 (bebas topik: sejarah/ekonomi/budaya/dll)"
-      icon: "pilih icon yang sesuai (bi-clock-history, bi-shop, bi-heart, bi-cup, dll)"
-      subjudul: "tulis subjudul yang menarik tentang topik ini"
-      icon_subjudul: "pilih icon untuk subjudul (bi-book, bi-graph-up, bi-star, dll)"
-      deskripsi: "tulis 2-3 paragraf tentang topik yang dipilih, jelaskan kenapa ini penting/menarik untuk kota ini"
+    # tulis judul tentang aspek kota #1 (bebas topik: sejarah/ekonomi/budaya/dll)
+    - judul:
+      # pilih icon yang sesuai (bi-clock-history, bi-shop, bi-heart, bi-cup, dll)
+      icon:
+      # tulis subjudul yang menarik tentang topik ini
+      subjudul:
+      # pilih icon untuk subjudul (bi-book, bi-graph-up, bi-star, dll)
+      icon_subjudul:
+      # tulis 2-3 paragraf tentang topik yang dipilih, jelaskan kenapa ini penting/menarik untuk kota ini
+      deskripsi:
       fakta:
-        - "tulis fakta menarik #1 tentang topik ini"
-        - "tulis fakta menarik #2"
-        - "tulis fakta menarik #3"
+        # tulis fakta menarik #1 tentang topik ini
+        -
+        # tulis fakta menarik #2
+        -
+        # tulis fakta menarik #3
+        -
 
-    - judul: "tulis judul tentang aspek kota #2 (bebas topik: sejarah/ekonomi/budaya/dll)"
-      icon: "pilih icon yang sesuai"
-      subjudul: "tulis subjudul yang menarik"
-      icon_subjudul: "pilih icon untuk subjudul"
-      deskripsi: "tulis 2-3 paragraf tentang topik yang dipilih"
+    # tulis judul tentang aspek kota #2 (bebas topik: sejarah/ekonomi/budaya/dll)
+    - judul:
+      # pilih icon yang sesuai
+      icon:
+      # tulis subjudul yang menarik
+      subjudul:
+      # pilih icon untuk subjudul
+      icon_subjudul:
+      # tulis 2-3 paragraf tentang topik yang dipilih
+      deskripsi:
       fakta:
-        - "tulis fakta menarik #1"
-        - "tulis fakta menarik #2"
-        - "tulis fakta menarik #3"
+        # tulis fakta menarik #1
+        -
+        # tulis fakta menarik #2
+        -
+        # tulis fakta menarik #3
+        -
 
   # REQUIRED: EXACTLY 2 cards - Topik bebas, format tetap!
   # Card bisa tentang: landmark, pendidikan, bisnis, infrastruktur, atau apapun tentang kota ini
   tentang_kota_2:
-    - judul: "tulis judul tentang aspek kota #3 (bebas topik: landmark/bisnis/wisata/dll)"
-      icon: "pilih icon yang sesuai (bi-building, bi-pin-map, bi-briefcase, dll)"
-      subjudul: "tulis subjudul yang menarik"
-      icon_subjudul: "pilih icon untuk subjudul"
-      deskripsi: "tulis 1-2 kalimat intro tentang topik ini"
+    # tulis judul tentang aspek kota #3 (bebas topik: landmark/bisnis/wisata/dll)
+    - judul:
+      # pilih icon yang sesuai (bi-building, bi-pin-map, bi-briefcase, dll)
+      icon:
+      # tulis subjudul yang menarik
+      subjudul:
+      # pilih icon untuk subjudul
+      icon_subjudul:
+      # tulis 1-2 kalimat intro tentang topik ini
+      deskripsi:
       list_item:
-        - "tulis <strong>Item #1</strong> deskripsi singkat (bisa nama tempat, institusi, atau hal menarik lainnya)"
-        - "tulis <strong>Item #2</strong> deskripsi singkat"
-        - "tulis <strong>Item #3</strong> deskripsi singkat"
-        - "tulis item tambahan jika ada (opsional)"
+        # tulis <strong>Item #1</strong> deskripsi singkat (bisa nama tempat, institusi, atau hal menarik lainnya)
+        -
+        # tulis <strong>Item #2</strong> deskripsi singkat
+        -
+        # tulis <strong>Item #3</strong> deskripsi singkat
+        -
+        # tulis item tambahan jika ada (opsional)
+        -
 
-    - judul: "tulis judul tentang aspek kota #4 (bebas topik: landmark/bisnis/wisata/dll)"
-      icon: "pilih icon yang sesuai"
-      subjudul: "tulis subjudul yang menarik"
-      icon_subjudul: "pilih icon untuk subjudul"
-      deskripsi: "tulis 1-2 kalimat tentang topik ini"
+    # tulis judul tentang aspek kota #4 (bebas topik: landmark/bisnis/wisata/dll)
+    - judul:
+      # pilih icon yang sesuai
+      icon:
+      # tulis subjudul yang menarik
+      subjudul:
+      # pilih icon untuk subjudul
+      icon_subjudul:
+      # tulis 1-2 kalimat tentang topik ini
+      deskripsi:
       list_item:
-        - "tulis <strong>Item #1</strong> deskripsi singkat"
-        - "tulis <strong>Item #2</strong> deskripsi singkat"
-        - "tulis item tambahan jika perlu (opsional)"
-      info_tambahan: "tulis info tambahan 1 kalimat (opsional, bisa dihapus jika tidak perlu)"
+        # tulis <strong>Item #1</strong> deskripsi singkat
+        -
+        # tulis <strong>Item #2</strong> deskripsi singkat
+        -
+        # tulis item tambahan jika perlu (opsional)
+        -
+      # tulis info tambahan 1 kalimat (opsional, bisa dihapus jika tidak perlu)
+      info_tambahan:
 
 # ============================================================================
 # SOCIAL METRICS (REQUIRED)
@@ -665,7 +896,8 @@ share_count: 0
 
 <section id="jual-kayu-dolken-terdekat">
 {% include reusable/block--jual-kayu-dolken-terdekat.html
-   nama_kota="isi nama kota (sama dengan nama_kota di frontmatter)"
+  # isi nama kota (sama dengan nama_kota di frontmatter)
+  nama_kota: 
 %}
 </section>
 
