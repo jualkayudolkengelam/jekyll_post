@@ -17,9 +17,35 @@ Agents should call the script rather than manually paste the whole pipeline, whi
 
 Build a Jekyll post for one city using the `TEMPLATE--post-with-city.md`.
 
+## Known pitfalls & design notes
+
+### `--skip-research` flag
+Flag **tidak benar-benar skip** — research agent v2 hanya support mode cache (`/tmp/research-output/{city}.json`). Flag `skip_agent` diabaikan di body fungsi. Selalu prepare cache JSON sebelum jalankan entrypoint, atau pipeline fail dengan FileNotFoundError.
+
+### Template path
+Template directory bernama `templates/` (lowercase), **bukan** `TEMPLATES/`. Default entrypoint sudah benar (`templates/TEMPLATE--post-with-city.md`), tapi path absolut juga bisa dipakai via `--template`.
+
+### Meta fields wajib diisi di template
+Pipeline (Writer → Editor → Reviewer) **tidak akan lolos** jika 5 field frontmatter ini null:
+- `title`, `description`, `excerpt`, `date`, `author`
+
+Template harus pre-fill dengan placeholder `{kota}` agar writer bisa substitusi. Contoh:
+```yaml
+title: "Jual Kayu Dolken {kota} | JualKayuDolkenGelam.Net"
+description: "Jual kayu dolken {kota}. Kayu gelam berkualitas..."
+```
+
+Jika dikosongkan (`title:` tanpa value), Reviewer akan reject:
+- `[FAIL] meta_title`, `[FAIL] meta_description`, dst.
+
+### Testing pipeline end-to-end
+1. Prepare cache: `echo '{"city": "Maros"}' > /tmp/research-output/maros.json`
+2. Run: `python3 entrypoint.py --city "Maros" --skip-research --output /tmp/test.md`
+3. Expected: Writer → Editor → Reviewer — exit 0 jika template pre-filled benar
+
 ## Prerequisites
 - Jekyll site with `_post_with_city/` directory
-- TEMPLATE at `TEMPLATES/TEMPLATE--post-with-city.md`
+- TEMPLATE at `templates/TEMPLATE--post-with-city.md` (not TEMPLATES/)
 - 2 source photos in WebP format (cwebp -q 80-85)
 - Real city info: kecamatan, landmark, proyek, testimoni
 
@@ -113,8 +139,11 @@ grep -c '"\(tulis\|isi\|berikan\|jelaskan\|contoh\|misal\)' _post_with_city/{pos
 Bila >0 → post belum siap. Lihat `references/known-issues.md` untuk detail bug + verifikasi cepat. Workflow manual REPORT→WAIT→FIX (section-by-section) tetap dapat dipercaya dan adalah jalan utama.
 
 ## Common Pitfalls
-- **Tool output truncation** — `read_file`, `terminal`, `execute_code` all suffer CCR encoding. Use `execute_code` with targeted line ranges, not whole-file reads.
-- **Patch fails with "file was modified"** — konten file mungkin beda dari yang dibaca. Gunakan `repr()` untuk dapat exact text, lalu patch dengan `old_string` exact.
+- Template path TEMPLATES/ vs templates/ — entrypoint default sudah ke templates/TEMPLATE--post-with-city.md. Pastikan tidak pakai TEMPLATES/
+- Research cache key lowercase — nama kota dinormalisasi lowercase. Buat JSON di /tmp/research-output/maros.json bukan Maros.json
+- Reviewer exit 1 is EXPECTED — pipeline stop karena meta fields (title, description, excerpt, date, author) sengaja kosong. Lanjut manual REPORT->WAIT->FIX per-section
+- Tool output truncation — read_file, terminal, execute_code suffer CCR encoding. Gunakan execute_code dengan line range target
+- Patch fails with file was modified — konten mungkin beda dari yang dibaca. Gunakan repr() untuk exact text
 - **Template has duplicate YAML keys** — `keunggulan_durabilitas` dan `keunggulan_nilai` muncul 2x (sekitar L66 instruksi, sekitar L245 konten). Pastikan patch target yang benar.
 - **Testimoni lokasi: Residential = kecamatan, Komersial = profesi/bisnis + area** — jangan tertukar.
 - **Aplikasi: 4 sub-groups, 5 aplikasi per group** — jangan kurang dari 5 items.

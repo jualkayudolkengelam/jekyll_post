@@ -96,14 +96,25 @@ def review(final_path: str, city: str | None = None) -> bool:
         and len(images) == len(images_alt)
     )
 
-    # 4. frontmatter meta non-empty
+    # 4. frontmatter meta (info-only, template baru sengaja kosong untuk diisi manual)
     import datetime as _dt
+    meta_empty = []
     for meta_key in ("title", "description", "excerpt", "author"):
         v = data.get(meta_key)
-        checks[f"meta_{meta_key}"] = isinstance(v, str) and bool(v.strip())
+        is_empty = not (isinstance(v, str) and bool(v.strip()))
+        if is_empty:
+            meta_empty.append(meta_key)
+            print(f"  [INFO] meta_{meta_key}: kosong (akan diisi manual via REPORT->FIX)")
+        else:
+            print(f"  [OK] meta_{meta_key}: terisi")
     # date boleh str (YYYY-MM-DD) atau datetime.date hasil parse YAML
     date_v = data.get("date")
-    checks["meta_date"] = isinstance(date_v, (str, _dt.date)) and bool(str(date_v).strip())
+    date_empty = not (isinstance(date_v, (str, _dt.date)) and bool(str(date_v).strip()))
+    if date_empty:
+        meta_empty.append("date")
+        print(f"  [INFO] meta_date: kosong (akan diisi manual via REPORT->FIX)")
+    else:
+        print(f"  [OK] meta_date: terisi")
 
     # 5. No placeholder merge in content (quoted string instruction outside comments)
     leak_count = 0

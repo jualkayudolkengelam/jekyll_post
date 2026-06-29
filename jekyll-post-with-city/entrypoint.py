@@ -4,7 +4,7 @@ jekyll_post_with_city — Entrypoint (v2)
 
 Usage:
   python3 entrypoint.py --city "Maros" \\
-      --template TEMPLATES/TEMPLATE--post-with-city.md \\
+      --template templates/TEMPLATE--post-with-city.md \\
       --output _post_with_city/2026-06-29-jual-kayu-dolken-maros.md
 
 Pipeline: Research -> Writer -> Editor -> Reviewer -> Output .md
@@ -73,7 +73,7 @@ def main() -> None:
     parser.add_argument("--city", required=True, help="Target kota/kabupaten")
     parser.add_argument(
         "--template",
-        default="TEMPLATES/TEMPLATE--post-with-city.md",
+        default="templates/TEMPLATE--post-with-city.md",
         help="Path ke TEMPLATE--post-with-city.md",
     )
     parser.add_argument(
